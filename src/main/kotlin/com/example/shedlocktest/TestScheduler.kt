@@ -12,11 +12,11 @@ class TestScheduler {
 
     @Scheduled(fixedDelay = 10000)
     @SchedulerLock(
-        name = "runNaverCafeProductBoardEventJob",
+        name = "runScheduledLock",
         lockAtLeastFor = "PT5S",
         lockAtMostFor = "PT5S"
     )
-    fun runNaverCafeProductBoardEventJob() {
+    fun runScheduledLock() {
         logger.info { "------------------------------" }
         logger.info { "안녕하세요 저는 8000 이에요" }
         logger.info { LocalDateTime.now().toString() }
